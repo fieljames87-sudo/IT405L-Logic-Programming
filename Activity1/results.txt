@@ -1,0 +1,77 @@
+﻿STEP 1 - PYTHON VERSION
+3.13.13
+
+STEP 4 - LOGICAL OPERATOR TRUTH TABLES
+
+MY_NOT
+my_not(True) = False
+my_not(False) = True
+
+MY_AND
+my_and(True, True) = True
+my_and(True, False) = False
+my_and(False, True) = False
+my_and(False, False) = False
+
+MY_OR
+my_or(True, True) = True
+my_or(True, False) = True
+my_or(False, True) = True
+my_or(False, False) = False
+
+MY_IMPLIES
+my_implies(True, True) = True
+my_implies(True, False) = False
+my_implies(False, True) = True
+my_implies(False, False) = True
+
+STEP 6 - LOGICAL EXPRESSION TESTS
+
+TEST 1
+Expression: ('and', True, ('not', False))
+Expected: True
+Actual: True
+Result: PASS
+
+TEST 2
+Expression: ('or', False, False)
+Expected: False
+Actual: False
+Result: PASS
+
+TEST 3
+Expression: ('implies', True, False)
+Expected: False
+Actual: False
+Result: PASS
+
+TEST 4
+Expression: ('implies', False, False)
+Expected: True
+Actual: True
+Result: PASS
+
+TEST 5
+Expression: ('not', ('and', True, ('or', False, True)))
+Expected: False
+Actual: False
+Result: PASS
+
+TEST 6
+Expression: ('or', ('and', ('and', False, True), ('and', False, False)), ('or', ('and', False, True), ('or', True, False)))
+Expected: True
+Actual: True
+Result: PASS
+
+PERSONALIZED EXPRESSION:
+(((False and True) and (False and False)) or ((False and True) or (True or False)))
+
+STEP 7 - EXPECTED DIVISION ERROR
+Expression: ("or", True, ("and", 1/0, False))
+
+ACTUAL PYTHON ERROR:
+Traceback (most recent call last):
+  File "C:\Users\ACER\Documents\IT405L_B03_2310228-1\Activity1\logic_ops.py", line 148, in <module>
+    expression = ("or", True, ("and", 1/0, False))
+                                      ~^~
+ZeroDivisionError: division by zero

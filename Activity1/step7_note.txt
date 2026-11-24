@@ -1,0 +1,1 @@
+Step 7 failed because Python tried to divide 1 by 0. Python does not allow this, so it showed a ZeroDivisionError. Python's built-in or can stop checking when the first value is True. Our evaluator checks both values first, so it cannot avoid the error.

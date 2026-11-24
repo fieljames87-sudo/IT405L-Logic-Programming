@@ -1,0 +1,5 @@
+﻿# IT405L - Mark James Fiel
+# Ignore temporary Python files
+__pycache__/
+*.pyc
+*.pyo
