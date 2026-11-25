@@ -1,0 +1,78 @@
+IT405L ACTIVITY 2 - STUDENT 2310228-1
+STEP 4 - TAUTOLOGY AND CONTRADICTION
+EXPRESSION: p or not p
+
+p | Result
+-----------
+True | True
+False | True
+
+EXPRESSION: p and not p
+
+p | Result
+-----------
+True | False
+False | False
+
+STEP 6 - DE MORGAN LAW
+EXPRESSION: not (p and q)
+
+p | q | Result
+---------------
+True | True | False
+True | False | True
+False | True | True
+False | False | True
+
+EXPRESSION: (not p) or (not q)
+
+p | q | Result
+---------------
+True | True | False
+True | False | True
+False | True | True
+False | False | True
+
+Equivalent: True
+STEP 7 - IMPLICATION
+EXPRESSION: ('implies', 'p', 'q')
+
+p | q | Result
+---------------
+True | True | True
+True | False | False
+False | True | True
+False | False | True
+
+EXPRESSION: (not p) or q
+
+p | q | Result
+---------------
+True | True | True
+True | False | False
+False | True | True
+False | False | True
+
+Equivalent: True
+
+STEP 8 - PERSONALIZED EXPRESSIONS
+E1: (q and (q or p))
+E2: (q or p)
+Equivalent: False
+First difference: p=True,q=False
+E1 result: False
+E2 result: True
+
+STEP 2 - ASSIGNMENT COUNTS
+1 variables: 2 rows (expected 2)
+2 variables: 4 rows (expected 4)
+3 variables: 8 rows (expected 8)
+4 variables: 16 rows (expected 16)
+
+STEP 5 - BASIC EQUIVALENCE
+p or q vs q or p: True
+p and q vs p or q: False
+
+STEP 9 - COMPLETE VARIABLE LIST
+Variables: p, q, r
+Equivalent: False
