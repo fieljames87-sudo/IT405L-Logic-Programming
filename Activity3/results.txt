@@ -1,0 +1,56 @@
+﻿IT405L ACTIVITY 3 - STUDENT 2310228-1
+
+STEP 1 - FAMILY FACTS
+('parent', 'mara', 'sela')
+('parent', 'mara', 'rey')
+('parent', 'mara', 'pia')
+('parent', 'sela', 'dina')
+('parent', 'dina', 'jom')
+('parent', 'sela', 'ana')
+('parent', 'jom', 'fritz')
+('parent', 'fritz', 'gina')
+
+STEP 3 - MATCHING TESTS
+Parents of sela: ['mara']
+Exact match: {}
+
+STEP 4 - FAMILY RULES
+Head: ('grandparent', 'X', 'Z') Conditions: [('parent', 'X', 'Y'), ('parent', 'Y', 'Z')]
+Head: ('ancestor', 'X', 'Z') Conditions: [('parent', 'X', 'Z')]
+Head: ('ancestor', 'X', 'Z') Conditions: [('parent', 'X', 'Y'), ('ancestor', 'Y', 'Z')]
+
+STEP 6 - GRANDPARENTS
+mara -> dina
+mara -> ana
+sela -> jom
+dina -> fritz
+jom -> gina
+Total: 5
+
+STEP 7 - ANCESTORS
+mara -> sela
+mara -> rey
+mara -> pia
+sela -> dina
+dina -> jom
+sela -> ana
+jom -> fritz
+fritz -> gina
+mara -> dina
+mara -> ana
+mara -> jom
+mara -> fritz
+mara -> gina
+sela -> jom
+sela -> fritz
+sela -> gina
+dina -> fritz
+dina -> gina
+jom -> gina
+Total: 19
+
+STEP 8 - CYCLIC FACT TEST
+Added fact: parent(ana, ana)
+Query: ancestor(ana, Z)
+Depth limit: 12
+RecursionError: Depth limit reached: possible cyclic ancestor rule
